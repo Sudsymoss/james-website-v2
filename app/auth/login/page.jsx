@@ -55,7 +55,6 @@ export default function Login() {
               }, []);
               return
     } else if (status === false) {
-        notify("info", "Loggin can now be used on mobile!")
         return (
             <div>
                 <div className={styles.login}>
