@@ -5,7 +5,6 @@ import styles from '../Auth.module.css'
 
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL);
 pb.autoCancellation(false)
-console.log(pb.baseUrl)
 async function loadLinks() {
   pb.autoCancellation(false)
     const authMethods = await pb.collection('users').listAuthMethods({ '$autoCancel': false });
