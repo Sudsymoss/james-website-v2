@@ -9,9 +9,8 @@ import styles from '../Auth.module.css'
 import Link from 'next/link'
 
 
-const pb = new PocketBase(process.env.POCKET_URL);
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL);
 pb.autoCancellation(false)
-
 export default function Login() {
     //useEffect(() => {
     //    if (/Mobile/.test(navigator.userAgent)) {

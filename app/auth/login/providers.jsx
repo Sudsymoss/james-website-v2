@@ -3,8 +3,9 @@ import PocketBase from 'pocketbase'
 import React, { useState, useEffect } from 'react';
 import styles from '../Auth.module.css'
 
-const pb = new PocketBase('https://pb.pi5.dev/');
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL);
 pb.autoCancellation(false)
+console.log(pb.baseUrl)
 async function loadLinks() {
   pb.autoCancellation(false)
     const authMethods = await pb.collection('users').listAuthMethods({ '$autoCancel': false });
@@ -18,7 +19,7 @@ async function loadLinks() {
 
 function Provide() {
   const [data, setData] = useState(null);
-  const redirectUrl = process.env.POCKET_URL_REDIRECT;
+  const redirectUrl = process.env.NEXT_PUBLIC_POCKET_URL_REDIRECT;
 
   useEffect(() => {
     async function fetchData() {

@@ -5,7 +5,7 @@ import PocketBase from 'pocketbase';
 import * as React from "react";
 import toast from "../../toast";
 
-const pb = new PocketBase(process.env.POCKET_URL)
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 
 export default function Account() {

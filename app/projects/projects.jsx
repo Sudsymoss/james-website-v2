@@ -5,7 +5,7 @@ import styles from './Projects.module.css'
 
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase(process.env.POCKET_URL)
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 async function getProjects() {
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

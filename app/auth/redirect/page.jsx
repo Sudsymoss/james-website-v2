@@ -13,8 +13,8 @@ function Provide() {
       }, []);
     useEffect(() => {
         // Code that uses the window object goes here
-        const pb = new PocketBase(process.env.POCKET_URL);
-        const redirectUrl = process.env.POCKET_URL_REDIRECT;
+        const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL);
+        const redirectUrl = process.env.NEXT_PUBLIC_POCKET_URL_REDIRECT;
 
         // parse the query parameters from the redirected url
         const params = new URL(window.location).searchParams;

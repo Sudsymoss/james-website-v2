@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase(process.env.POCKET_URL)
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 export default function Footer() {
     function logout(){

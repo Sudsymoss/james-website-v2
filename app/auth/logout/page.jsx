@@ -12,7 +12,7 @@ const SourceSansPro = Source_Sans_Pro({
   weight: '400',
   subsets: ['latin'],
 })
-const pb = new PocketBase(process.env.POCKET_URL);
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL);
 
 
 export default function Login() {

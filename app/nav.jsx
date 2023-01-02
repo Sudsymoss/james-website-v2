@@ -4,7 +4,7 @@ import styles from './Nav.module.css'
 import Link from 'next/link'
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase(process.env.POCKET_URL)
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 export default function Nav() {
     
