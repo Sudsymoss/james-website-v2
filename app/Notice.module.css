@@ -1,0 +1,51 @@
+.main{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    background-color: red;
+}
+@keyframes notice {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .notice {
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* notice bar has a width equal to the screen */
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    
+  }
+  
+  .notice > .msg {
+    display: flex;
+    white-space: nowrap;
+    min-width: 100%;
+    animation: notice 12s linear infinite;
+    z-index: 25;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    color: rgb(248, 111, 111);
+  }
+
+  
+
+  @media(max-width: 900px){
+    .msg{
+        animation: notcie 6s linear infinite;
+    }
+  }
