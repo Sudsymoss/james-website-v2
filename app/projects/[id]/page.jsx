@@ -3,7 +3,7 @@ import card from './Card.module.css'
 
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase("http://192.168.86.178:8090")
+const pb = new PocketBase(process.env.POCKET_URL)
 
 async function getProject(projectId) {
 const data = await pb.collection('projects').getOne(projectId);

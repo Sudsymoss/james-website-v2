@@ -3,7 +3,7 @@ import PocketBase from 'pocketbase'
 import React, { useState, useEffect } from 'react';
 import styles from '../Auth.module.css'
 
-const pb = new PocketBase('http://192.168.86.178:8090');
+const pb = new PocketBase('https://pb.pi5.dev/');
 pb.autoCancellation(false)
 async function loadLinks() {
   pb.autoCancellation(false)
@@ -18,7 +18,7 @@ async function loadLinks() {
 
 function Provide() {
   const [data, setData] = useState(null);
-  const redirectUrl = 'http://poe.local:3000/auth/redirect';
+  const redirectUrl = 'https://beta.suddsy.dev/auth/redirect';
 
   useEffect(() => {
     async function fetchData() {

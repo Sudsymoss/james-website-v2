@@ -4,7 +4,7 @@ import styles from './Nav.module.css'
 import Link from 'next/link'
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase("http://192.168.86.178:8090")
+const pb = new PocketBase(process.env.POCKET_URL)
 
 export default function Nav() {
     

@@ -6,7 +6,7 @@ import * as React from "react";
 import toast from "../../toast";
 import Providers from '../login/providers';
 
-const pb = new PocketBase("http://192.168.86.178:8090")
+const pb = new PocketBase(process.env.POCKET_URL)
 
 
 export default function Login() {

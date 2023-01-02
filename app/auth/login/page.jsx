@@ -9,7 +9,7 @@ import styles from '../Auth.module.css'
 import Link from 'next/link'
 
 
-const pb = new PocketBase('http://192.168.86.178:8090');
+const pb = new PocketBase(process.env.POCKET_URL);
 pb.autoCancellation(false)
 
 export default function Login() {

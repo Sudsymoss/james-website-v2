@@ -13,8 +13,8 @@ function Provide() {
       }, []);
     useEffect(() => {
         // Code that uses the window object goes here
-        const pb = new PocketBase("http://192.168.86.178:8090");
-        const redirectUrl = 'http://poe.local:3000/auth/redirect';
+        const pb = new PocketBase(process.env.POCKET_URL);
+        const redirectUrl = 'https://beta.suddsy.dev/auth/redirect';
 
         // parse the query parameters from the redirected url
         const params = new URL(window.location).searchParams;
