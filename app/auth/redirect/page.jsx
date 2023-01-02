@@ -14,7 +14,7 @@ function Provide() {
     useEffect(() => {
         // Code that uses the window object goes here
         const pb = new PocketBase(process.env.POCKET_URL);
-        const redirectUrl = 'https://beta.suddsy.dev/auth/redirect';
+        const redirectUrl = process.env.POCKET_URL_REDIRECT;
 
         // parse the query parameters from the redirected url
         const params = new URL(window.location).searchParams;

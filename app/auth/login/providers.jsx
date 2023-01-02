@@ -18,7 +18,7 @@ async function loadLinks() {
 
 function Provide() {
   const [data, setData] = useState(null);
-  const redirectUrl = 'https://beta.suddsy.dev/auth/redirect';
+  const redirectUrl = process.env.POCKET_URL_REDIRECT;
 
   useEffect(() => {
     async function fetchData() {
