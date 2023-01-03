@@ -59,7 +59,7 @@ export default function Account() {
   async function delUser(e) {
     e.preventDefault()
     const response = await pb.collection('users').delete(pb.authStore.model.id)
-    const clear = pb.authStore.clear();
+    pb.authStore.clear();
     console.log(response)
     if (response !== true) {
       notify("error", "Account failed to delete!")
