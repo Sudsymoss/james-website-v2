@@ -1,15 +1,14 @@
-"use client";
+"use server";
 import Link from "next/link";
 import Head from "next/head";
 import styles from './Projects.module.css'
 
 import PocketBase from 'pocketbase';
-export const revalidate = 3;
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 async function getProjects() {
-  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  await delay(5000);
+  //const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  //await delay(5000);
   const data = await pb.collection('projects').getFullList(200 /* batch size */, {
     sort: '-created',
   });
