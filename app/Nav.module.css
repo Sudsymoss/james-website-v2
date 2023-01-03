@@ -52,6 +52,8 @@ transition: background-size 0.2s ease-in-out;
     border: 3px solid rgb(208, 208, 208);
     border-radius: 1vh;
     transition: border 0.7s;
+    object-fit: fill;
+    object-position: center;
 }
 
 .usericon:hover{
