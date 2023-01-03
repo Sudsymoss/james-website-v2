@@ -4,7 +4,7 @@ import Head from "next/head";
 import styles from './Projects.module.css'
 
 import PocketBase from 'pocketbase';
-
+export const revalidate = 3;
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 async function getProjects() {
