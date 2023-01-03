@@ -114,60 +114,7 @@
     max-width: 100%;
     width: calc(100% - 10%);
     align-self: center;
-  }
-  
-  .pdec,
-  .ptitle,
-  .pname {
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .psubmit {
-    background-color: #4de65a;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .psubmitdel {
-  
-    background-color: rgb(255, 84, 84);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-  
-  .psubmitdel:hover {
-    background-color: rgb(213, 0, 0);
-  }
-  
-  .psubmitmod {
-    background-color: #ffbc58;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .psubmitmod:hover {
-    background-color: #ffa622;
-  }
-  
-  .psubmit:hover, .psubmit:active {
-    background-color: #00ae0f;
+    height: 60vh;
   }
   
   .pform {
@@ -177,34 +124,27 @@
     display: flex;
     flex-direction: column;
     margin: 3vh 2%;
-  }
-  
-  .alertcon {
-  
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: transparent;
-    padding-top: 50px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
-  
-  
-  
-  #alert {
-    text-align: center;
-    background-color: rgb(233, 233, 233);
-    border-radius: 20px;
-    padding: 10vh;
-    border: 10px solid black;
-    animation: bflash 0.8s infinite forwards;
-  
+
+  .aform {
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 3vh 2%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .usericon{
+    width: 10vh;
+    height: 10vh;
+    border: 3px solid rgb(208, 208, 208);
+    border-radius: 1vh;
   }
   
   
@@ -264,4 +204,51 @@
       padding: 3vh;
       border-width: 0.8vh;
     }
+  }
+
+  .button{
+    padding: 0;
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    margin: 1vh 0;
+    width: 80%;
+  }
+
+  .finput{
+    display: none;
+  }
+
+  .button:hover .buttontop {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+  }
+  
+  .button:active .buttontop {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }
+
+  .buttontop{
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+
+  #delavatar{
+    background-color: rgb(255, 84, 84) !important;
+  }
+
+  #delavatar:hover{
+    background-color: rgb(213, 0, 0) !important ;
   }

@@ -32,7 +32,7 @@ export default function Nav() {
                     <li><Link href="/about" passHref legacyBehavior><a>About</a></Link></li>
                     <li><Link href="/projects" passHref legacyBehavior><a>Projects</a></Link></li>
                     <li id="conflash" className={styles.acc}><Link legacyBehavior href="/u/myaccount" passHref><a>Account</a></Link></li>
-                    <Link href="/u/myaccount" passHref><img className={styles.usericon} src={`https://github.com/identicons/${pb.authStore.model.username}.png`}></img></Link>
+                    <Link href="/u/myaccount" passHref><img className={styles.usericon} src={pb.baseUrl + "/api/files/_pb_users_auth_/" + pb.authStore.model.id + "/" + pb.authStore.model.avatar ||`https://github.com/identicons/${pb.authStore.model.username}.png`}></img></Link>
                 </ul>
             </div>
         </div>

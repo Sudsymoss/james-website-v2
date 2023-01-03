@@ -34,7 +34,7 @@ export default function Login() {
         try{
             const record = await pb.collection('users').create(data);
             notify("success", "Account created!")
-            window.location.replace('/')
+            window.location.replace('/u/myaccount')
             const authData = await pb.collection('users').authWithPassword(name,password);
             const authDataaaa = await pb.collection('users').authRefresh();
         } catch (error){
