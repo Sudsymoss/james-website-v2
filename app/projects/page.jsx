@@ -1,17 +1,21 @@
 import { Suspense } from "react"
 import Load from '../loading'
 import Projects from './projects'
-
-
-import ClientComponent from "./client";
 export const revalidate = 1;
 // Pages are Server Components by default
 export default function Page() {
   return (
-    <ClientComponent>
+    <div className={styles.main}>
+                <div className={styles.title}>
+                    <h1>Projects</h1>
+                </div>
+                <div>
+                    
       <Suspense fallback={<Load/>}>
                 <Projects/>
         </Suspense>
-    </ClientComponent>
+                </div>
+            </div>
+    
   );
 }
