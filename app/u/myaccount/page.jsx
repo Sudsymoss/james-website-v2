@@ -36,8 +36,9 @@ export default function Account() {
     try {
       const record = await pb.collection('users').update(pb.authStore.model.id, formData2);
       notify("success", "Avatar updated!")
-      console.log(record)
-      window.location.reload()
+      setTimeout(() => {
+        window.location.reload()
+      }, 500);
     } catch (error) {
       console.log(error)
       notify("error", "Failed to update avatar!")
