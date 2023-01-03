@@ -1,3 +1,4 @@
+import styles from './Projectspage.module.css'
 import { Suspense } from "react"
 import Load from '../loading'
 import Projects from './projects'
