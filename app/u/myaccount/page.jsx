@@ -114,7 +114,7 @@ export default function Account() {
             <h2>DELETE ACCOUNT</h2>
             <p>By deleting your account, you acknowledge that all of your data linked to this account will be deleted and can NOT be restored. This will have an immediate effect!</p>
             <input type="checkbox" id="conf" name="email" value={pb.authStore.model.email} required className={styles.conf} />
-            <button className={styles.button} onClick={rmAvatar} type="submit" >
+            <button className={styles.button} type="submit">
               <div class={styles.buttontop} id={styles.delavatar}>
                 <label class={styles.customfileupload}>
                   <p id={styles.fileInputName}>Delete Account</p>
