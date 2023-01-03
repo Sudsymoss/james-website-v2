@@ -38,7 +38,7 @@ export default function Account() {
       notify("success", "Avatar updated!")
       setTimeout(() => {
         window.location.reload()
-      }, 500);
+      }, 1200);
     } catch (error) {
       console.log(error)
       notify("error", "Failed to update avatar!")
