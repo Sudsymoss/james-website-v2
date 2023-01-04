@@ -7,7 +7,6 @@ import {
   FaExclamationTriangle,
   FaBug,
   FaExclamationCircle,
-  FaSpinner
 } from "react-icons/fa";
 
 export const displayIcon = (type) => {
@@ -20,8 +19,6 @@ export const displayIcon = (type) => {
       return <FaExclamationCircle />;
     case "warning":
       return <FaExclamationTriangle />;
-    case "spinner":
-      return <FaSpinner/>;
     default:
       return <FaBug />;
   }

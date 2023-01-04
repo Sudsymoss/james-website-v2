@@ -34,7 +34,7 @@ export default function Account() {
     document.getElementById("fileInputName").textContent = "Wait!";
     document.getElementById("uploadbuttontext").textContent = "Uploading...";
     try {
-      notify("spinner", "Uploading avatar...")
+      notify("info", "Uploading avatar...")
       const record = await pb.collection('users').update(pb.authStore.model.id, formData2);
       notify("success", "Avatar updated!")
       setTimeout(() => {
