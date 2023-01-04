@@ -9,7 +9,7 @@ const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 export default function Footer() {
     function logout(){
         pb.authStore.clear()
-        window.location.reload()
+        window.location.replace("/auth/login")
     }
     if (pb.authStore.isValid === true) {
         
