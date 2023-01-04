@@ -6,7 +6,7 @@ import {
   FaCheck,
   FaExclamationTriangle,
   FaBug,
-  FaExclamationCircle,
+  FaExclamationCircle
 } from "react-icons/fa";
 
 export const displayIcon = (type) => {

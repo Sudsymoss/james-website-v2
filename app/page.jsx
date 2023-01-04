@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
+import TimeLeft from './timeleft'
 //import PocketBase from 'pocketbase';
 //const pb = new PocketBase("http://192.168.86.178:8090")
 
@@ -12,6 +13,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1>James M</h1>
       <h3>Version: beta</h3>
+      <TimeLeft/>
     </main>
   )
 }
