@@ -4,6 +4,7 @@ import Footer from './footer'
 import Toaster from './toaster'
 import Notice from './notice'
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

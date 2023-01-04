@@ -1,24 +1,25 @@
+'use server';
 import Link from "next/link";
-import Head from "next/head";
 import styles from './Projects.module.css'
-
 import PocketBase from 'pocketbase';
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 async function getProjects() {
   //const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   //await delay(5000);
-  const data = await pb.collection('projects').getFullList(200 /* batch size */, {
-    sort: '-created',
-  });
-  console.log(data);
+  const data = await pb.collection('projects').getFullList(200 /* batch size */, {sort: '-created',});
   return data;
 }
 
-export default async function Projectss() {
+export default function Projectss() {
+  return(
+    <ProjectMap/>
+  )
+}
+
+async function ProjectMap(){
   const projects1 = await getProjects();
   return (
-    
     <div className={styles.main}>
       <div className={styles.projects}>
         {projects1.map((item) => (
