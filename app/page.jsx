@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <h1>James M</h1>
-      <h3>Version: beta</h3>
       <TimeLeft/>
     </main>
   )
