@@ -1,27 +1,22 @@
-"use client";
 import styles from './Notice.module.css'
-import { useEffect } from 'react';
-export default function notice() {
-    useEffect(() => {
-        //  Code that uses the window object goes here
-        const notice = document.getElementById('notice');
+import PocketBase from 'pocketbase';
+const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
-        window.addEventListener('scroll', function () {
-            if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-                notice.style.bottom = 'auto';
-                notice.style.top = '63px';
-            } else {
-                notice.style.top = 'auto';
-                notice.style.bottom = '0';
-            }
-        });
+async function getProjects() {
+    //const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    //await delay(5000);
+    const data = await pb.collection('notices').getList(1, 1, { sort: '-created' });
+    console.log(data)
+    return data;
+}
 
-    }, []);
+export default async function notice() {
+    const notice = await getProjects();
     return (
         <div className={styles.main}>
             <div className={styles.notice} id="notice">
                 <div className={styles.msg}>
-                    <h3>Website under active devlopment! THIS IS A BETA website!</h3>
+                <h1>{notice.items[0].msg}</h1>
                 </div>
             </div>
         </div>
