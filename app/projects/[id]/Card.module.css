@@ -52,4 +52,11 @@
     transform: translateY(100%);
    }
    
+
+   @media (max-width: 900px) {
+    .card{
+        height: 80vh;
+        width: 95%;
+    }
+   }
    
