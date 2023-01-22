@@ -35,16 +35,23 @@ export default function Login() {
   }
   return (
     <div>
-      <div className={styles.main}>
-        <div className={styles.loginbox}>
-          <h1>Logout</h1>
-          <div className={styles.logprov}>
-            <button onClick={logOut} className={styles.loginbtn} style={SourceSansPro.style}>Signout</button>
-          </div>
-          <Link legacyBehavior passHref href="/"><a className={styles.logincancel}>Cancel</a></Link>
-        </div>
-      </div>
+      <div>
+                <div className={styles.login}>
+                    <div className={styles.card}>
+                        <h4 className={styles.title}>Logout!</h4>
+                        <form>
+                            <div className={styles.buttons}>
+                                <button className={styles.crbtn} onClick={logOut} type="submit">Logout</button>
+                                <Link passHref legacyBehavior href="/"><a className={styles.btn} >Cancel</a></Link>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+
     </div>
+    
   )
 
 }
