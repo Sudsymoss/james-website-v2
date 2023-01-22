@@ -24,7 +24,8 @@
     position: absolute;
     gap: 1em;
     flex-direction: column;
-    background-color: #f5f5f5;
+    background-color: #969696c3;
+    color: whitesmoke;
     height: fit-content;
     bottom: 0;
     border-radius: 1em 1em 0em 0em;
