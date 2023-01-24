@@ -1,5 +1,6 @@
 html,
 body {
+  background: black;
   min-height: 100vh;
   color: black;
   padding: 0;
@@ -12,6 +13,25 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+h1 {
+  background-image: radial-gradient(circle, #dedede, #2e4ba9, #3effc6);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move-background 10s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -100% -100%;
+  }
+}
+
 
 * {
   box-sizing: border-box;

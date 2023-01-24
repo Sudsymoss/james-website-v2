@@ -119,7 +119,7 @@
   
   .pform {
     border-radius: 5px;
-    background-color: #e2e2e2;
+    background-color: #d55656;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -130,7 +130,7 @@
 
   .aform {
     border-radius: 5px;
-    background-color: #e2e2e2;
+    background-color: #32c0ad;
     padding: 20px;
     display: flex;
     flex-direction: column;
