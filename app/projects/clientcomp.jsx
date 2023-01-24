@@ -7,7 +7,7 @@ export default function Page({children}) {
   const notify = React.useCallback((type, message) => {
     toast({ type, message });
   }, []);
-  notify("warning", 'Projects may not update properly due to a server issue!')
+  //notify("warning", 'Projects may not update properly due to a server issue!')
   return (
     <div className={styles.main}>
       <div className={styles.title}>
