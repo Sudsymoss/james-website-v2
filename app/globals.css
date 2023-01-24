@@ -15,20 +15,21 @@ a {
 }
 
 h1 {
-  background-image: radial-gradient(circle, #dedede, #2e4ba9, #3effc6);
-  background-size: 200% 200%;
+  text-align: center;
+  
+  background: radial-gradient(circle,#dedede,#2e4ba9,#3effc6);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: move-background 10s linear infinite;
-  animation-fill-mode: forwards;
+  animation: shine 7s ease-in-out infinite;
 }
-
-@keyframes move-background {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: -100% -100%;
+@keyframes shine {
+  to {
+    background-position: -200% center;
   }
 }
 
