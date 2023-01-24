@@ -72,7 +72,7 @@ transition: background-size 0.2s ease-in-out;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 912px) {
     .navdiv>h3{
         display: none;
     }
