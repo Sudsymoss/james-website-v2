@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <h1>James M</h1>
+      
     </main>
   )
 }
