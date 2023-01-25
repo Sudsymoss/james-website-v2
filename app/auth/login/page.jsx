@@ -1,12 +1,12 @@
 "use client";
-
-import { Suspense, useState, useEffect } from 'react';
+import {useState, useEffect } from 'react';
 import * as React from "react";
 import toast from "../../toast";
 import PocketBase from 'pocketbase';
 import Providers from './providers'
 import styles from '../Auth.module.css'
 import Link from 'next/link'
+import Loading from '../../loading';
 
 
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL);
@@ -52,7 +52,9 @@ export default function Login() {
                 //  Code that uses the window object goes here
                 window.location.replace("/auth/logout")
               }, []);
-              return
+            return(
+                <Loading/>
+            )
     } else if (status === false) {
         return (
             <div>
