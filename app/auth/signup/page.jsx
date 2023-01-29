@@ -36,6 +36,8 @@ export default function Login() {
             notify("success", "Account created!")
             const authData = await pb.collection('users').authWithPassword(name,password);
             const authDataaaa = await pb.collection('users').authRefresh();
+            notify("warning", 'Please verify email!')
+            await pb.collection('users').requestVerification(email);
             setTimeout(() => {
                 window.location.replace('/u/myaccount')
             }, 1000);
