@@ -23,7 +23,7 @@ export default function Account() {
         formData2.append('avatar', file);
         document.getElementById("buttontop").style.backgroundColor = "#89b39f";
         document.getElementById("uploadbutton").style.backgroundColor = "#1ee384";
-        document.getElementById("fileInputName").textContent = file.name;
+        document.getElementById("fileInputName").textContent = 'File selected';
       }
     });
   }, []);
