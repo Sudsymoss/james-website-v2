@@ -21,3 +21,9 @@
     margin: 0 5vh 5vh 5vh;
     min-height: 30vh;
 }
+
+@media (max-width: 600px){
+    .about{
+        grid-template-columns: 1fr;
+    }
+}

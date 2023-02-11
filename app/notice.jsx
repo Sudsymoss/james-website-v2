@@ -16,7 +16,7 @@ export default async function notice() {
         <div className={styles.main}>
             <div className={styles.notice} id="notice">
                 <div className={styles.msg}>
-                <h1>{notice.items[0].msg}</h1>
+                <h2>{notice.items[0].msg}</h2>
                 </div>
             </div>
         </div>

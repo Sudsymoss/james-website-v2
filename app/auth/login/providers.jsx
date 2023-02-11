@@ -28,7 +28,7 @@ function Provide() {
     fetchData();
   }, []);
   if(data == null){
-    return <p>Loading more options...</p>
+    return <p>Loading more...</p>
   }
   return (
     <>

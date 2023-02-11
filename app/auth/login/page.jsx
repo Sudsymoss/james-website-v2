@@ -24,7 +24,15 @@ export default function Login() {
         toast({ type, message });
         console.log(type, message)
       }, []);
-
+      async function pwdReset(){
+        try {
+            await pb.collection('users').requestPasswordReset(pb.authStore.model.email);
+            notify('success', 'Password reset email sent!')
+        } catch (error) {
+            console.log(error)
+            notify('warning', 'Failed to send reset email!')
+        }
+      }
     async function auth(event) {
         console.error("REQ RECV")
         event.preventDefault();
@@ -74,9 +82,10 @@ export default function Login() {
                             </div>
                             <div className={styles.buttons}>
                                 <button className={styles.btn} type="submit">Login</button>
-                                <Link passHref legacyBehavior href="/auth/signup"><a className={styles.crbtn} >Signup</a></Link>
                                 <Providers/>
                             </div>
+                            <p className={styles.signup}>Forgot password? <a className={styles.signuplink} onClick={pwdReset}>Reset</a></p>
+                            <p className={styles.signup}>New here? <Link className={styles.signuplink} href='/auth/signup'>Signup</Link></p>
                         </form>
                         
                     </div>

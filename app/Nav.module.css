@@ -4,14 +4,14 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 10vh;
-    color: white;
+    color: black;
 }
 
 .container {
     position: fixed;
     width: 100%;
     max-width: inherit;
-    background-color: rgb(20 20 20 / 67%);
+    background-color: rgba(255, 255, 255, 0.67);
     z-index: 10;
     top: 0;
 }
@@ -35,7 +35,7 @@ transition: background-size 0.2s ease-in-out;
 }
 
 .navdiv > ul > li:hover{
-    color: rgb(74, 211, 165);
+    color: rgb(104 74 211);
     background-size: 100% 0.1em;
 }
 

@@ -117,7 +117,7 @@ transition: background-size 0.2s ease-in-out;
     width: 329px;
     padding: 1.9rem 1.2rem;
     text-align: center;
-    background: #2a2b38;
+    background: linear-gradient(45deg, #a4abff, #ff7d7d);
     border-radius: 1em;
     font-size: 150% !important;
    }
@@ -136,7 +136,8 @@ transition: background-size 0.2s ease-in-out;
     align-items: center;
     justify-content: center;
     gap: .5em;
-    background-color: #1f2029;
+    background-color: transparent;
+    border: 1px solid #ffffff6b;
     border-radius: 4px;
     padding: .5em 1em;
    }
@@ -154,7 +155,18 @@ transition: background-size 0.2s ease-in-out;
     width: 100%;
     color: #d3d3d3;
    }
-   
+   .signup{
+    font-size: 60%;
+    color: gray ;
+    text-align: center;
+   }
+   .signuplink{
+    color: #b75aa3;
+   }
+   .signuplink:hover{
+    text-decoration: underline;
+    cursor: pointer;
+   }
    /*Text*/
    .title {
     margin-bottom: 1rem;

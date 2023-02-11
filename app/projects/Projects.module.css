@@ -120,7 +120,7 @@
     width: 40vh;
     height: 254px;
     border-radius: 20px;
-    background: #3b3b3b;;
+    background: #f0f0f0;;
     position: relative;
     padding: 1.8rem;
     border: 2px solid #c3c6ce;
@@ -129,7 +129,7 @@
    }
    
    .carddetails {
-    color: white;
+    color: rgb(0, 0, 0);
     height: 100%;
     gap: .5em;
     display: grid;
