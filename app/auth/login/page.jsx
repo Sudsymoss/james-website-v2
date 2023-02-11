@@ -26,7 +26,14 @@ export default function Login() {
       }, []);
       async function pwdReset(){
         try {
-            await pb.collection('users').requestPasswordReset(pb.authStore.model.email);
+            let text;
+  let person = prompt("Please enter your email:", "");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = person
+  }
+            await pb.collection('users').requestPasswordReset(person);
             notify('success', 'Password reset email sent!')
         } catch (error) {
             console.log(error)
