@@ -1,5 +1,5 @@
 .main {
-    min-height: 100vh;
+    min-height: 70vh;
     padding: 4rem 0;
     flex: 1;
     display: flex;
@@ -103,10 +103,11 @@
   }
   
   .forms {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-direction: row;
-    justify-content: space-evenly;
     text-align: center;
+    justify-items: center ;
   }
   
   
@@ -141,13 +142,14 @@
   }
 
   .usericon{
-    width: 10vh;
-    height: 10vh;
-    border: 3px solid rgb(208, 208, 208);
-    border-radius: 1vh;
-    object-fit: cover;
+    max-width: 30vh;
+    max-height: 30vh;
+    /* border: 3px solid #d0d0d0; */
+    border-radius: 3vh;
+    object-fit: contain;
     object-position: center;
     overflow: hidden;
+    padding: 1vh;
   }
   .uploader{
     width: 100%;
@@ -207,11 +209,14 @@
     }
   
     .forms {
-      flex-direction: column;
+      grid-template-columns: 1fr;
     }
     #alert{
       padding: 3vh;
       border-width: 0.8vh;
+    }
+    .uploader{
+      grid-template-columns: 1fr;
     }
   }
 

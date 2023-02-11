@@ -85,8 +85,10 @@ export default function Account() {
         </main>
         <div className={styles.forms}>
           <form onSubmit={upload} className={styles.aform} id="form">
-            <h2>Upload avatar</h2>
+            <h2>Avatar</h2>
             <img className={styles.usericon} src={pb.baseUrl + "/api/files/_pb_users_auth_/" + pb.authStore.model.id + "/" + pb.authStore.model.avatar || `https://github.com/identicons/${pb.authStore.model.username}.png`} />
+            
+            <div className={styles.uploader}>
             <button className={styles.button} onClick={rmAvatar} type="button" >
               <div class={styles.buttontop} id={styles.delavatar}>
                 <label class={styles.customfileupload}>
@@ -94,7 +96,7 @@ export default function Account() {
                 </label>
               </div>
             </button>
-            <div className={styles.uploader}>
+            <div></div>
             <div className={styles.button}>
               <div class={styles.buttontop} id="buttontop">
                 <label class={styles.customfileupload}>
