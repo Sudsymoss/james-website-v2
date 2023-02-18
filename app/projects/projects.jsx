@@ -8,6 +8,8 @@ async function getProjects() {
   //const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   //await delay(50000);
   const data = await pb.collection('projects').getFullList(200 /* batch size */, {sort: '-created'});
+  //{sort: '-created', filter: 'author = ""'}
+
   return data;
 }
 
