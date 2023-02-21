@@ -58,6 +58,7 @@ export default function Login() {
                 if (record.disabled == true) {
                     notify('error', `Error this account is currently disabled!`)
                     pb.authStore.clear()
+                    window.location.replace('/auth/my-account-is-disabled')
                 } else {
                     notify("success", "Logged in Successfuly!")
                     window.location.replace("/projects")
