@@ -37,8 +37,19 @@ function Provide() {
                 avatar: provider.avatarUrl,
             }
         ).then((authData) => {
-            notify("success", "Logged in Successfuly!")
-            window.location.replace("/")
+            console.log(authData)
+            try {
+                if (pb.authStore.model.disabled == true) {
+                    notify('error', `Error this account is currently disabled!`)
+                    pb.authStore.clear()
+                    window.location.replace('/auth/my-account-is-disabled')
+                } else {
+                    notify("success", "Logged in Successfuly!")
+                    window.location.replace("/projects")
+                }
+            } catch (error) {
+                console.log(error)
+            }
             //console.log(pb.authStore.isValid);
             //console.log(pb.authStore.token);
             //console.log(pb.authStore.model.id);
