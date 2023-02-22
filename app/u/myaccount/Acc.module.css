@@ -283,10 +283,10 @@
 }
 
 .lbutton {
-  border: 2px solid #24b4fb;
-  background-color: #24b4fb;
+  border: 2px solid #fb2424;
+  background-color: #ff5b5b;
   border-radius: 0.9em;
-  padding: 0.8em 1.2em 0.8em 1em;
+  padding: 0.8em;
   transition: all ease-in-out 0.2s;
   font-size: 16px;
  }
@@ -298,7 +298,10 @@
   color: #fff;
   font-weight: 600;
  }
+ .lspan>svg{
+  fill: white;
+ }
  
  .lbutton:hover {
-  background-color: #0071e2;
+  background-color: #ff7c7c;
  }
