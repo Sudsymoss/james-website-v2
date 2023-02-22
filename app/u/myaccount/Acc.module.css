@@ -267,3 +267,38 @@
   #delavatar:hover{
     background-color: rgb(213, 0, 0) !important ;
   }
+
+
+  
+.lcreate {
+  display: none;
+  position: fixed;
+  bottom: 2vh;
+  left: 2vh;
+}
+@media (max-width: 700px) {
+  .lcreate{
+    display: block;
+  }
+}
+
+.lbutton {
+  border: 2px solid #24b4fb;
+  background-color: #24b4fb;
+  border-radius: 0.9em;
+  padding: 0.8em 1.2em 0.8em 1em;
+  transition: all ease-in-out 0.2s;
+  font-size: 16px;
+ }
+ 
+ .lbutton .lspan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+ }
+ 
+ .lbutton:hover {
+  background-color: #0071e2;
+ }

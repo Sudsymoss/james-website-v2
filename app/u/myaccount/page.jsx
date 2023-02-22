@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import PocketBase from 'pocketbase';
 import * as React from "react";
 import toast from "../../toast";
+import Link from 'next/link';
 
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
@@ -126,6 +127,15 @@ export default function Account() {
               </div>
             </button>
           </form>
+        </div>
+        <div className={styles.lcreate}>
+          <Link href='/auth/logout'>
+          <button className={styles.lbutton}>
+            <span className={styles.lspan}>
+              Logout
+            </span>
+          </button>
+          </Link>
         </div>
       </div>
     )
