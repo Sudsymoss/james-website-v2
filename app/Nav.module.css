@@ -73,23 +73,14 @@ transition: background-size 0.2s ease-in-out;
 }
 
 @media (max-width: 912px) {
-    .navdiv>h3{
-        display: none;
-    }
     .navdiv{
-        flex-direction: column;
-        margin: 0;
-        list-style-type: none;
-        
+        width: 100%;
+    }
+    .navdiv>h3{
+        padding: 0;
     }
     .navitems{
         width: 100%;
         justify-content: space-evenly;
-    }
-    .acc{
-        display: block;
-    }
-    .usericon{
-        
     }
 }
