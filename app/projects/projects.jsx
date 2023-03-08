@@ -2,6 +2,7 @@
 import Link from "next/link";
 import styles from './Projects.module.css'
 import PocketBase from 'pocketbase';
+import Loader from './projectloader'
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 async function getProjects() {
@@ -20,22 +21,29 @@ export default function Projectss() {
 }
 
 async function ProjectMap(){
-  const projects1 = await getProjects();
-  return (
-    <div className={styles.main}>
-      <div className={styles.projects}>
-        {projects1.map((item) => (
-          <>
-            <div className={styles.card}>
-              <div className={styles.carddetails} key={item.id}>
-                <p className={styles.texttitle} key={item.title}>{item.title}</p>
-                <p className={styles.textbody} key={item.updated}>Last updated: {item.updated}</p>
+  try {
+    const projects1 = await getProjects();
+    return (
+      <div className={styles.main}>
+        <div className={styles.projects}>
+          {projects1.map((item) => (
+            <>
+              <div className={styles.card}>
+                <div className={styles.carddetails} key={item.id}>
+                  <p className={styles.texttitle} key={item.title}>{item.title}</p>
+                  <p className={styles.textbody} key={item.updated}>Last updated: {item.updated}</p>
+                </div>
+                <Link className={styles.cardbutton} href={"/projects/" + item.id} key={item.name}>View project</Link>
               </div>
-              <Link className={styles.cardbutton} href={"/projects/" + item.id} key={item.name}>View project</Link>
-            </div>
-          </>
-        ))}
+            </>
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } catch (error) {
+    console.log(error)
+    return(
+      <Loader errormsg='ALERT Load failed!'/>
+    )
+  }
 }
