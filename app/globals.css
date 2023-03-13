@@ -1,8 +1,8 @@
 html,
 body {
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   min-height: 100vh;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -162,3 +162,132 @@ h1 {
   }
 }
 
+
+.snow {
+	position: fixed;
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.snow .svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#snow-top-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 22.5s infinite linear;
+}
+
+#snow-bottom-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 45s infinite linear;
+}
+
+@media(max-width: 600px){
+  #snow-top-layer {
+    animation: fall 12s infinite linear;
+  }
+  
+  #snow-bottom-layer {
+    animation: fall 25s infinite linear;
+  }
+
+  .snow{
+    filter: blur(3px);
+  -webkit-filter: blur(3px);
+  }
+}
+
+@keyframes fall {
+	
+	100% {
+		transform: translateY(0);
+	}
+	
+}
+
+
+.card {
+  width: 190px;
+  height: 254px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  overflow: visible;
+ }
+ 
+ .card .item {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ .item:hover, .item:active {
+  transform: scale(0.95);
+  transition: all 0.3s;
+ }
+ 
+ .item svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 7px;
+ }
+ 
+ .item--1 {
+  background: #c7c7ff;
+ }
+ 
+ .item--2 {
+  background: #ffd8be;
+ }
+ 
+ .item--3 {
+  background: #a9ecbf;
+ }
+ 
+ .item--4 {
+  background: #f3bbe1;
+ }
+ 
+ .quantity {
+  font-size: 25px;
+  font-weight: 600;
+ }
+ 
+ .text {
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 600;
+ }
+ 
+ .text--1 {
+  color: rgba(149,149,255,1);
+ }
+ 
+ .text--2 {
+  color: rgba(252,161,71,1);
+ }
+ 
+ .text--3 {
+  color: rgba(66,193,110,1);
+ }
+ 
+ .text--4 {
+  color: rgba(220,91,183,1);
+ }

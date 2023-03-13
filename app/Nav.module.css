@@ -4,14 +4,14 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 10vh;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .container {
     position: fixed;
     width: 100%;
     max-width: inherit;
-    background-color: rgba(255, 255, 255, 0.67);
+    background-color: rgba(0, 0, 0, 0.67);
     z-index: 10;
     top: 0;
 }
@@ -26,28 +26,6 @@
 .navitems{
     padding: 0;
     align-items: center;
-}
-
-
-
-.usericon{
-    width: 5vh;
-    height: 5vh;
-    border: 3px solid rgb(208, 208, 208);
-    border-radius: 1vh;
-    transition: border 0.7s;
-    object-fit: cover;
-    object-position: center;
-    overflow: hidden;
-}
-
-.usericon:hover{
-    border-color: #d99a5a;
-    transform: rotate(360deg);
-}
-
-.acc{
-    display: none;
 }
 
 @media (max-width: 1000px) {
@@ -77,8 +55,8 @@
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
-    background: transparent;
-    color: black;
+    background: rgb(22, 22, 22);
+    color: rgb(255, 255, 255);
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: all 0.2s ease-in;
@@ -92,7 +70,7 @@
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.4s ease-out;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
   .pbutton:hover::before {
