@@ -13,7 +13,9 @@ export default function Nav() {
             <div className={styles.navdiv}>
                 <h3><Link legacyBehavior passHref href="/"><a>James M</a></Link></h3>
                 <ul className={styles.navitems}>
-                    <li><Link legacyBehavior href="/projects" passHref><a>Projects</a></Link></li>
+                    <li><Link href="/projects"><button className={styles.pbutton}>
+    Projects
+</button></Link></li>
                 </ul>
             </div>
         </div>
