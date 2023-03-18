@@ -1,15 +1,15 @@
 html,
 body {
-  background: transparent;
+  background: white;
   min-height: 100vh;
-  color: rgb(255, 255, 255);
+  color: black;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 :root{
-  background-color: #000;
+  background-color: #fff;
 }
 a {
   color: inherit;

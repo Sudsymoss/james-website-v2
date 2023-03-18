@@ -1,21 +1,20 @@
 .navdiv{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* flex-direction: row; */
-    align-items: center;
-    justify-content: space-evenly;
-    /* margin: 0 10vh; */
-    color: #fff;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #000;
+  justify-items: center;
 }
 
 .container {
-    position: fixed;
-    width: 100%;
-    max-width: inherit;
-    background-color: rgba(0, 0, 0, 0.67);
-    z-index: 10;
-    top: 0;
+  position: fixed;
+  width: 100%;
+  max-width: inherit;
+  background: linear-gradient(180deg, rgb(255 255 255), rgb(255 255 255 / 67%));
+  z-index: 10;
+  top: 0;
+  box-shadow: 0px 5px 50px 30px #f4f4f4;
 }
 
 .navdiv > ul{
