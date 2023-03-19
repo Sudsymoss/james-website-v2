@@ -1,5 +1,4 @@
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+export const revalidate = 120
 import { Suspense } from "react"
 import Projects from './projects'
 import Clientcomp from './clientcomp'
