@@ -116,7 +116,11 @@
         
     }
 }
-
+@media(max-width: 500px){
+    .main{
+        padding: 0;
+    }
+}
 .card {
     width: 40vh;
     height: 254px;
