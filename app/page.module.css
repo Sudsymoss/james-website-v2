@@ -81,6 +81,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: 0.4s all;
  }
  
  .citem:hover, .citem:active {
