@@ -9,45 +9,52 @@
   
 }
 
-.button {
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-family: inherit;
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  color: #7926ff;
-  background-color: #e0e8ef;
-  border-style: solid;
-  border-width: 2px 2px 2px 2px;
-  border-color: rgba(255, 255, 255, 0.333);
-  border-radius: 40px 40px 40px 40px;
-  padding: 16px 24px 16px 28px;
-  transform: translate(0px, 0px) rotate(0deg);
-  transition: 0.2s;
-  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
- }
- 
- .button:hover {
-  color: #516d91;
-  background-color: #E5EDF5;
-  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
- }
- 
- .button:active {
-  box-shadow: none;
- }
-
 @media(max-width: 600px){
   .aboutcards{
     grid-template-columns: 1fr;
   }
 }
 
+
+.rbutton {
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid #991bfd;
+  background: linear-gradient(to right, rgb(166 27 253 / 10%) 1%, transparent 40%,transparent 60% , rgb(230 27 253 / 10%) 100%);
+  color: #9c1bfd;
+  box-shadow: inset 0 0 10px rgb(160 27 253 / 40%), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  min-width: 200px;
+}
+
+.rbutton:hover {
+  color: #bb82ff;
+  box-shadow: inset 0 0 10px rgb(210 27 253 / 60%), 0 0 9px 3px rgb(235 27 253 / 20%);
+  cursor: pointer;
+
+}
+
+.rbutton:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(178, 27, 253, 0.1) 40%,rgba(249, 27, 253, 0.1) 60% , transparent 100%);
+}
+
+.rbutton:hover:before {
+  transform: translateX(15em);
+}
+ 
 
 .aboutsec{
   padding: 0 10vh;
@@ -69,8 +76,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 5px;
+  gap: 1em;
   overflow: visible;
+  cursor: pointer;
  }
  
  .ccard .citem {
@@ -85,8 +93,9 @@
  }
  
  .citem:hover, .citem:active {
-  transform: scale(0.95);
+  transform: scale(1.05);
   transition: all 0.3s;
+  color: #f1f1f1;
  }
  
  .citem svg {
@@ -273,3 +282,8 @@
     height: 25em;
   }
  }
+
+ 
+
+
+ 
