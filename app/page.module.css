@@ -79,6 +79,9 @@
   gap: 1em;
   overflow: visible;
   cursor: pointer;
+  box-shadow: 1px 1px 17px 9px #ececec;
+    border-radius: 1em;
+    padding: 1em;
  }
  
  .ccard .citem {
@@ -154,7 +157,7 @@
   display: flex;
   width: 100%;
   height: 400px;
-  background: #171717;
+  background: #ffffff;
   transition: 1s ease-in-out;
   -webkit-clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
   clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
@@ -164,11 +167,12 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  color: #000;
 }
 
 .acard span {
   font-weight: bold;
-  color: white;
+  color: inherit;
   text-align: center;
   display: block;
   padding-top: 1em;
@@ -177,7 +181,7 @@
 
 .ainfo {
   font-weight: 400;
-  color: white;
+  color: inherit;
   display: block;
   text-align: center;
   padding-top: 0.1em;
@@ -190,7 +194,7 @@
 .acard .aimg {
   width: 4.8em;
   height: 4.8em;
-  background: white;
+  background: inherit;
   border-radius: 15px;
   margin: 1.8em;
 }
@@ -208,11 +212,11 @@
 }
 
 .acard .sbutt {
-  color: white;
+  color: inherit;
   transition: .4s ease-in-out;
 }
 .acard .sbuttdis {
-  color: white;
+  color: inherit;
   transition: .4s ease-in-out;
 }
 
@@ -281,8 +285,8 @@
     height: 25em;
   }
  }
-
  
-
-
- 
+ .abbba{
+  box-shadow: 1px 1px 17px 9px #ececec;
+    border-radius: 1em;
+ }

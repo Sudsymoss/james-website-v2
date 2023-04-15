@@ -16,6 +16,7 @@ export default function Nav() {
                 <li className={styles.normalnavitem}><Link href="https://gallery.suddsy.dev/" target='_blank' aria-label='photo gallery'>Gallery</Link></li>
                 <li className={styles.normalnavitem}><Link href="https://news.suddsy.dev/" target='_blank' aria-label='news site'>News</Link></li>
                 <li className={styles.normalnavitem}><Link href="/projects" aria-label='my projects'>Projects</Link></li>
+                <li className={styles.normalnavitem}><Link href="/"  aria-label='home'>HOME</Link></li>
                 </ul>
             </div>
         </div>

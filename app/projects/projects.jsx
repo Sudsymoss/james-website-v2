@@ -4,6 +4,7 @@ import styles from './Projects.module.css'
 import PocketBase from 'pocketbase';
 import Loader from './projectloader'
 const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
+pb.autoCancellation(false)
 
 async function getProjects() {
   //const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
