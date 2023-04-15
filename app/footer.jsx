@@ -2,27 +2,24 @@
 import styles from './Footer.module.css'
 import Link from 'next/link'
 import Script from 'next/script'
-import PocketBase from 'pocketbase';
-
-const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETURL)
 
 export default function Footer() {
-    function logout(){
-        pb.authStore.clear()
-        window.location.replace("/auth/login")
-    }
-    if (pb.authStore.isValid === true) {
-        
-        return (
-            <div>
-                <div className={styles.footer}>
-                    <p className={styles.username}>{pb.authStore.model.username}</p>
-                    <p>© James M 2022</p>
-                    <a id={styles.style2} data-replace="Logout" onClick={logout} className={styles.logoutbut}><span data-replace="Logout" onClick={logout} className={styles.logoutbut}>Logout</span></a>
-                </div>
-            </div>
-        )
-    }
+    //function logout(){
+    //    pb.authStore.clear()
+    //    window.location.replace("/auth/login")
+    //}
+    //if (pb.authStore.isValid === true) {
+    //    
+    //    return (
+    //        <div>
+    //            <div className={styles.footer}>
+    //                <p className={styles.username}>{pb.authStore.model.username}</p>
+    //                <p>© James M 2022</p>
+    //                <a id={styles.style2} data-replace="Logout" onClick={logout} className={styles.logoutbut}><span data-replace="Logout" onClick={logout} className={styles.logoutbut}>Logout</span></a>
+    //            </div>
+    //        </div>
+    //    )
+    //}
     //if (session && session.user.role == "admin") {
     //    return (
     //        <div>

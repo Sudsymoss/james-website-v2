@@ -12,7 +12,6 @@
     min-height: 100vh;
     width: 100%;
     align-items: center;
-    padding: 0 10vh;
 }
 
 .projects{
@@ -20,7 +19,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10vh;
     overflow: hidden;
-    padding-bottom: 10vh;
+    padding: 2em;
 }
 
 .title {
@@ -125,12 +124,13 @@
     width: 40vh;
     height: 254px;
     border-radius: 20px;
-    background: #f0f0f0;;
+    background: #ffffff;;
     position: relative;
     padding: 1.8rem;
-    border: 2px solid #c3c6ce;
+    box-shadow: 1px 1px 20px 9px #efefef;
     transition: 0.5s ease-out;
     overflow: visible;
+    cursor: pointer;
    }
    
    .carddetails {
@@ -156,6 +156,11 @@
     opacity: 0;
     transition: 0.3s ease-out;
     text-align: center;
+    border: 3px solid transparent;
+   }
+   .cardbutton:hover{
+    background-color: #8e2de2;
+    border: 3px solid rgb(209, 209, 209);
    }
    
    .textbody {

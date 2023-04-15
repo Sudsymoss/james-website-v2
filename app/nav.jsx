@@ -14,7 +14,8 @@ export default function Nav() {
                 <h3><Link legacyBehavior passHref href="/"><a>James M</a></Link></h3>
                 <ul className={styles.navitems}>
                 <li className={styles.normalnavitem}><Link href="https://gallery.suddsy.dev/" target='_blank' aria-label='photo gallery'>Gallery</Link></li>
-                    <li><Link href="/projects"><button className={styles.pbutton} aria-label='projects page link'>Projects</button></Link></li>
+                <li className={styles.normalnavitem}><Link href="https://news.suddsy.dev/" target='_blank' aria-label='news site'>News</Link></li>
+                <li className={styles.normalnavitem}><Link href="/projects" aria-label='my projects'>Projects</Link></li>
                 </ul>
             </div>
         </div>
