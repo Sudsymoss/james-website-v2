@@ -67,7 +67,7 @@
 
 
 .aboutsec {
-  padding: 0vh 10vh 12vh 10vh;
+  padding:0vh 10vh 5vh 10vh;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -316,12 +316,12 @@
   }
 
   .acard {
-    height: 25em;
+    height: fit-content;
     grid-template-columns: 1fr;
   }
 
   .aboutsec {
-    gap: 5em;
+    gap: 1em;
   }
 
   .aimg>img {

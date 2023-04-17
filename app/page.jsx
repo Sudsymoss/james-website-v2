@@ -1,12 +1,8 @@
 "use client";
-import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
-//import PocketBase from 'pocketbase';
-//const pb = new PocketBase("http://192.168.86.178:8090")
-
-const inter = Inter({ subsets: ['latin'] })
+import TopProjects from './topprojects'
 
 export default function Home() {
   return (
@@ -60,6 +56,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <TopProjects/>
     </div>
   )
 }
