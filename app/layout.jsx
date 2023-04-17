@@ -2,7 +2,6 @@ import './globals.css'
 import Nav from './nav'
 import Footer from './footer'
 import Toaster from './toaster'
-import Socials from './socials'
 
 export default function RootLayout({ children }) {
   return (
@@ -16,8 +15,7 @@ export default function RootLayout({ children }) {
         <Nav />
         <Toaster />
         {children}
-        <Footer />
-        <Socials/>
+        {/*<Footer />*/}
       </body>
     </html>
   )
