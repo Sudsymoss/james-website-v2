@@ -13,12 +13,9 @@ export default function Home() {
     <div>
       <main className={styles.main}>
         <div className={styles.maintop}>
+        <Link className={styles.namelink} href='/projects'>
           <h1>James M</h1>
-          <div id="">
-            <Link href='/projects'>
-            <button className={styles.rbutton}>Projects</button>
-            </Link>
-          </div>
+        </Link>
         </div>
       </main>
       <div className={styles.aboutsec}>

@@ -10,7 +10,7 @@
   position: fixed;
     width: 100%;
     max-width: inherit;
-    background: #fff !important;
+    background: #ffffff80 !important;
   z-index: 10;
   top: 0;
 }

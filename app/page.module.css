@@ -6,57 +6,67 @@
   padding: 6rem;
   min-height: 52vh;
   flex-wrap: nowrap;
-  
+
 }
 
-@media(max-width: 600px){
-  .aboutcards{
+@media(max-width: 600px) {
+  .aboutcards {
     grid-template-columns: 1fr;
   }
 }
 
+.namelink{
+  transition: all 0.6s;
+  transform: rotate(-1deg);
+}
+
+.namelink:hover{
+  transform: scale(1.5) rotate(4deg);
+}
+.namelink:hover::before{
+  content: 'boo 👻';
+  float: right;
+  transform: rotate(-9deg);
+}
 
 .rbutton {
-  font-size: 15px;
-  padding: 0.7em 2.7em;
-  letter-spacing: 0.06em;
-  position: relative;
-  font-family: inherit;
-  border-radius: 0.6em;
-  overflow: hidden;
-  transition: all 0.3s;
-  line-height: 1.4em;
-  border: 2px solid #991bfd;
-  background: linear-gradient(to right, rgb(166 27 253 / 10%) 1%, transparent 40%,transparent 60% , rgb(230 27 253 / 10%) 100%);
-  color: #9c1bfd;
-  box-shadow: inset 0 0 10px rgb(160 27 253 / 40%), 0 0 9px 3px rgba(27, 253, 156, 0.1);
-  min-width: 200px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(0, 225, 255);
+  text-shadow: none;
+  background: transparent;
+  box-shadow: transparent;
+  border: 1px solid rgb(0, 225, 255);
+  transition: 0.5s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: all 0.5s;
 }
 
 .rbutton:hover {
-  color: #bb82ff;
-  box-shadow: inset 0 0 10px rgb(210 27 253 / 60%), 0 0 9px 3px rgb(235 27 253 / 20%);
   cursor: pointer;
-
+  color: #ffffff;
+  background: #7926ff;
+  border: 1px solid #7926ff;
+  text-shadow: 0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px #ffffff;
+  box-shadow: 0 0 5px #7926ff,
+    0 0 20px #7926ff,
+    0 0 50px #7926ff,
+    0 0 100px #7926ff;
+    transform: scale(1.05);
+}
+.rbutton:active{
+  transform: scale(0.95);
 }
 
-.rbutton:before {
-  content: "";
-  position: absolute;
-  left: -4em;
-  width: 4em;
-  height: 100%;
-  top: 0;
-  transition: transform .4s ease-in-out;
-  background: linear-gradient(to right, transparent 1%, rgba(178, 27, 253, 0.1) 40%,rgba(249, 27, 253, 0.1) 60% , transparent 100%);
-}
 
-.rbutton:hover:before {
-  transform: translateX(15em);
-}
- 
-
-.aboutsec{
+.aboutsec {
   padding: 0vh 10vh 12vh 10vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -80,11 +90,11 @@
   overflow: visible;
   cursor: pointer;
   /*box-shadow: 1px 1px 17px 9px #ececec;*/
-    border-radius: 1em;
-    padding: 1em;
- }
- 
- .ccard .citem {
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.ccard .citem {
   border-radius: 10px;
   width: 100%;
   height: 100%;
@@ -93,68 +103,70 @@
   align-items: center;
   justify-content: center;
   transition: 0.4s all;
+  text-align: center;
 
- }
- 
- .citem:hover, .citem:active {
+}
+
+.citem:hover,
+.citem:active {
   transform: scale(1.05);
   transition: all 0.3s;
   color: #f1f1f1;
- }
- 
- .citem svg {
+}
+
+.citem svg {
   width: 40px;
   height: 40px;
   margin-bottom: 7px;
- }
- 
- .citem1 {
+}
+
+.citem1 {
   background: #c7c7ff;
- }
- 
- .citem2 {
+}
+
+.citem2 {
   background: #ffd8be;
- }
- 
- .citem3 {
+}
+
+.citem3 {
   background: #a9ecbf;
- }
- 
- .citem4 {
+}
+
+.citem4 {
   background: #f3bbe1;
- }
- 
- .cquantity {
+}
+
+.cquantity {
   font-size: 25px;
   font-weight: 600;
- }
- 
- .ctext {
+}
+
+.ctext {
   font-size: 12px;
   font-family: inherit;
   font-weight: 600;
- }
- 
- .ctext1 {
-  color: rgba(149,149,255,1);
- }
- 
- .ctext2 {
-  color: rgba(252,161,71,1);
- }
- 
- .ctext3 {
-  color: rgba(66,193,110,1);
- }
- 
- .ctext4 {
-  color: rgba(220,91,183,1);
- }
+}
+
+.ctext1 {
+  color: rgba(149, 149, 255, 1);
+}
+
+.ctext2 {
+  color: rgba(252, 161, 71, 1);
+}
+
+.ctext3 {
+  color: rgba(66, 193, 110, 1);
+}
+
+.ctext4 {
+  color: rgba(220, 91, 183, 1);
+}
 
 
 
 
- .acard {
+.acard {
   display: grid;
   grid-template-columns: 1fr 3fr;
   width: 100%;
@@ -195,19 +207,20 @@
 
 
 .acard .aimg {
-     width: 100%;
-    height: 100%;
-    background: inherit;
-    border-radius: 15px;
-    /* margin: 1.8em;*/
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 15px;
+  /* margin: 1.8em;*/
 }
-.aimg{
+
+.aimg {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.aimg img{
+.aimg img {
   width: 15em;
   height: 15em;
   object-fit: cover;
@@ -215,10 +228,10 @@
   border: 5px solid #eaeaea;
   box-shadow: 1px 1px 15px 8px #bebebe;
   transition: 1s all;
-    
+
 }
 
-.aimg img:hover{
+.aimg img:hover {
   transform: scale(1.05);
   cursor: crosshair;
 }
@@ -232,6 +245,7 @@
   color: inherit;
   transition: .4s ease-in-out;
 }
+
 .acard .sbuttdis {
   color: inherit;
   transition: .4s ease-in-out;
@@ -265,7 +279,7 @@
 }
 
 
-.maintop{
+.maintop {
   height: 55vh;
   display: flex;
   flex-direction: column;
@@ -273,7 +287,7 @@
   justify-content: center;
 }
 
-.arrow{
+.arrow {
   animation: updown 2s ease-in-out infinite;
 }
 
@@ -281,42 +295,52 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-50px);
   }
+
   100% {
     transform: translateY(0);
   }
 }
 
- @media(max-width: 900px){
-  .aboutsec{
+@media(max-width: 900px) {
+  .aboutsec {
     grid-template-columns: 1fr;
     padding: 2vh;
   }
 
-  .ccard{
+  .ccard {
     height: 400px;
   }
-  .acard{
+
+  .acard {
     height: 25em;
     grid-template-columns: 1fr;
   }
-  .aboutsec{
+
+  .aboutsec {
     gap: 5em;
   }
-  .aimg>img{
+
+  .aimg>img {
     width: 10em;
     height: 10em;
   }
- }
- 
- .abbba{
+  .main{
+    height: 30vh;
+    min-height: none;
+  }
+}
+
+.abbba {
   /*box-shadow: 1px 1px 17px 9px #ececec;*/
-    border-radius: 1em;
- }
- .ccc{
+  border-radius: 1em;
+}
+
+.ccc {
   display: grid;
   grid-template-columns: 1fr;
   font-size: 130%;
- }
+}
