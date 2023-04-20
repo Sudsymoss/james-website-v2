@@ -5,13 +5,13 @@ export default function topProjects(){
         <div className={styles.container}>
             <div className={styles.title}><h3>Some of my projects</h3></div>
             <div className={styles.projects}>
-                <Link href='https://news.suddsy.dev/'>
+                <Link href='https://news.jamesmowat.com/'>
                 <div className={styles.project}>
                     <h1>News</h1>
                     <p>A site to be a kinda modernish news/blog site made with next js, with a built in editor and publisher</p>
                 </div>
                 </Link>
-                <Link href='https://gallery.suddsy.dev'>
+                <Link href='https://gallery.jamesmowat.com'>
                 <div className={`${styles.project} ${styles.rotateopp}`}>
                     <h1>Gallery</h1>
                     <p>Photo filled site full of my very own photos, with a built in filter and live updates connected to a pocket base db</p>
