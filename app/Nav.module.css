@@ -11,6 +11,8 @@
     width: 100%;
     max-width: inherit;
     background: #ffffff80 !important;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
   z-index: 10;
   top: 0;
 }

@@ -17,6 +17,33 @@ a {
   text-decoration: none;
 }
 
+
+@font-face {
+  font-family: "Pacifico";
+  src: url('../fonts/Pacifico-Regular.ttf');
+}
+@font-face {
+  font-family: "Kelfill";
+  src: url('../fonts/Kelsi-fill.otf');
+}
+@font-face {
+  font-family: "Kelreg";
+  src: url('../fonts/Kelsi-Regular.otf');
+}
+@font-face {
+  font-family: "Bsign";
+  src: url('../fonts/Bsign-Regular.ttf');
+}
+@font-face {
+  font-family: "Jersy";
+  src: url('../fonts/behance-637fc8bc34000.ttf');
+}
+@font-face {
+  font-family: "Monserat";
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+
 h1 {
   text-align: center;
   
