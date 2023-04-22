@@ -19,7 +19,7 @@
     bottom: 0;
     width: 100%; /* notice bar has a width equal to the screen */
     height: 50px;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     display: flex;
     align-items: center;
