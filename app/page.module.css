@@ -15,7 +15,7 @@
   min-height: 100vh;
   flex-wrap: nowrap;
   font-size: 30px;
-  font-family: 'Jersy';
+  font-family: Jersy;
   position: relative;
 }
 
@@ -24,8 +24,6 @@
   top: 0;
   left: 0;
   right: 0;
-  height: fit-content;
-  width: 100%;
 }
 
 .main h1 {
@@ -340,7 +338,7 @@
   margin: 1.8em;
 }
 
-.abbba{
+.abbba {
   padding: 2em;
 }
 
@@ -433,7 +431,7 @@
     border-radius: 0;
   }
 
-  .abbba{
+  .abbba {
     padding: 0;
   }
 
@@ -453,7 +451,8 @@
     height: 30vh;
     min-height: none;
   }
-  .ainfo{
+
+  .ainfo {
     font-size: 14px;
 
   }
@@ -469,11 +468,12 @@
   0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
+
   50% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
+
   100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
 }
-
