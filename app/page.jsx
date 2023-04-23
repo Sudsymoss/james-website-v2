@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <main className={styles.main}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7926ff" fill-opacity="1" d="M0,288L48,277.3C96,267,192,245,288,245.3C384,245,480,267,576,256C672,245,768,203,864,181.3C960,160,1056,160,1152,154.7C1248,149,1344,139,1392,133.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+      <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" className={styles.topsvg}><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#7926ff"></stop><stop offset="95%" stop-color="#7926ff"></stop></linearGradient></defs><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#7926ff"></stop><stop offset="95%" stop-color="#abb8c3"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,266 0,266 C 185.86666666666667,263.20000000000005 371.73333333333335,260.40000000000003 530,269 C 688.2666666666667,277.59999999999997 818.9333333333334,297.59999999999997 966,299 C 1113.0666666666666,300.40000000000003 1276.5333333333333,283.20000000000005 1440,266 C 1440,266 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" className={styles.path1} transform="rotate(-180 720 200)"></path></svg>
         <div className={styles.maintop}>
           <Link className={styles.namelink} href='/projects'>
             <h1>James M</h1>
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <TopProjects />
         <div className={styles.ccard_container}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#d0cfcfff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,245.3C384,256,480,224,576,224C672,224,768,256,864,224C960,192,1056,96,1152,90.7C1248,85,1344,171,1392,213.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7926ff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,245.3C384,256,480,224,576,224C672,224,768,256,864,224C960,192,1056,96,1152,90.7C1248,85,1344,171,1392,213.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 
           <span className={`${styles.sectitle} ${styles.ccard_title}`}>Some stats</span>
           <div className={styles.ccard}>

@@ -5,6 +5,8 @@
   justify-items: center;
   border-top: 1px dashed gray;
   padding: 1em;
+  z-index: 2;
+  position: relative;
 }
 
 .footer>p {
@@ -36,6 +38,34 @@
   list-style-type: none;
 }
 
+
+
+.container {
+  position: relative;
+}
+
+.customshapedividerbottom1682285930 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.customshapedividerbottom1682285930 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.customshapedividerbottom1682285930 .shapefill {
+  fill: #7926ff;
+}
+
 @media (max-width: 600px) {
   .footer {
     font-size: 12px;
@@ -47,5 +77,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .customshapedividerbottom1682285930 svg {
+    height: 50px;
   }
 }
