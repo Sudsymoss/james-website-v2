@@ -79,9 +79,10 @@
 @media(max-width: 900px){
     .container{
         height:fit-content;
-        padding: 1em;
+        padding: 3em 0;
     }
     .projects{
         grid-template-columns: 1fr;
+        padding: 1em;
     }
 }
