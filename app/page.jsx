@@ -3,25 +3,46 @@ import styles from './page.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
 import TopProjects from './topprojects'
+import { useEffect } from 'react';
 export default function Home() {
+  useEffect(() => {
+    const element = document.getElementById('me_img_1');
+    const windowHeight = window.innerHeight;
+
+    function animateElementIn() {
+      const elementTop = element.getBoundingClientRect().top + 170;
+
+      if (elementTop <= windowHeight) {
+        element.classList.add('animate-in');
+        document.getElementById('animate_element_2').classList.add('animate-in');
+      }
+    }
+
+    function handleScroll() {
+      console.log('hi')
+      animateElementIn();
+    }
+
+    window.addEventListener('scroll', handleScroll);
+  }, [])
   return (
     <div>
       <main className={styles.main}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7926ff" fill-opacity="1" d="M0,288L48,277.3C96,267,192,245,288,245.3C384,245,480,267,576,256C672,245,768,203,864,181.3C960,160,1056,160,1152,154.7C1248,149,1344,139,1392,133.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7926ff" fill-opacity="1" d="M0,288L48,277.3C96,267,192,245,288,245.3C384,245,480,267,576,256C672,245,768,203,864,181.3C960,160,1056,160,1152,154.7C1248,149,1344,139,1392,133.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
         <div className={styles.maintop}>
           <Link className={styles.namelink} href='/projects'>
             <h1>James M</h1>
           </Link>
           <p>A devloper like no other</p>
         </div>
-        </main>
+      </main>
       <div className={styles.aboutsec}>
         <div className={styles.abbba}>
           <div className={styles.acard}>
-            <div className={styles.aimg}>
-              <Image priority width='400' height='400' alt="me" src="/Me-hmpg.jpg" />
+            <div id='me_img_1' className={styles.aimg}>
+              <Image  priority width='400' height='400' alt="me" src="/Me-hmpg.jpg" />
             </div>
-            <div className={styles.ccc}>
+            <div id='animate_element_2' className={styles.ccc}>
               <span className={styles.sectitle}>About Me</span>
               <p className={styles.ainfo}>I'm James, a fairly new developer with a focus on Next.js and Node.js. My specialization lies in creating efficient and scalable web applications using these technologies. Leveraging my expertise in Next.js and Node.js, I can help you build fast and responsive websites that deliver an exceptional user experience.</p>
               <div className={styles.ashare}>
