@@ -27,8 +27,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className={styles.credits}>
-                    <h3>Legal</h3>
-                    <h5>Domains</h5>
+                    <h5>My other domains</h5>
                     <ul>
                         <li>suddsy.dev</li>
                         <li>sudsy.dev</li>
