@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /projects
 Disallow: /*/
 Disallow: /*.jpg$
 Disallow: /*.png$
