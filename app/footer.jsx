@@ -1,42 +1,41 @@
 "use client";
 import styles from './Footer.module.css'
-import Link from 'next/link'
-import Script from 'next/script'
+import Link from 'next/link';
 
 export default function Footer() {
-    //function logout(){
-    //    pb.authStore.clear()
-    //    window.location.replace("/auth/login")
-    //}
-    //if (pb.authStore.isValid === true) {
-    //    
-    //    return (
-    //        <div>
-    //            <div className={styles.footer}>
-    //                <p className={styles.username}>{pb.authStore.model.username}</p>
-    //                <p>© James M 2022</p>
-    //                <a id={styles.style2} data-replace="Logout" onClick={logout} className={styles.logoutbut}><span data-replace="Logout" onClick={logout} className={styles.logoutbut}>Logout</span></a>
-    //            </div>
-    //        </div>
-    //    )
-    //}
-    //if (session && session.user.role == "admin") {
-    //    return (
-    //        <div>
-    //            <div className={styles.footer}>
-    //                <Link href="/admin" passHref><a id={styles.style2} data-replace="Admin" className={styles.logoutbut}><span>Admin</span></a></Link>
-    //                <p>© James M 2022</p>
-    //                <Link href="/auth/logout" passHref><a id={styles.style2} data-replace="Logout" className={styles.logoutbut}><span>Logout</span></a></Link>
-    //            </div>
-    //        </div>
-    //    )
-    //}
     return (
         <div>
             <div className={styles.footer}>
-                <div></div>
-                <p>© James M 2022</p>
-                <div></div>
+                <div className={styles.credits}>
+                    <h3>Credits</h3>
+                    <ul>
+                        <li>Database: <Link href='https://pocketbase.io'>Pocketbase</Link></li>
+                        <li>Github page: <Link href='https://github.com/jfmow'>jfmow</Link></li>
+                    </ul>
+                </div>
+                <div className={styles.credits}>
+                    <h3>Creator</h3>
+                    <ul>
+                        <li>Made by James M</li>
+                    </ul>
+                </div>
+                <div className={styles.credits}>
+                    <h3>Other sites</h3>
+                    <ul>
+                        <li><Link href='https://news.jamesmowat.com'>News</Link></li>
+                        <li><Link href='https://gallery.jamesmowat.com'>Gallery</Link></li>
+                    </ul>
+                </div>
+                <div className={styles.credits}>
+                    <h3>Legal</h3>
+                    <h5>Domains</h5>
+                    <ul>
+                        <li>suddsy.dev</li>
+                        <li>sudsy.dev</li>
+                        <li>jamesmowat.com</li>
+                        <li>pi5.dev</li>
+                    </ul>
+                </div>
             </div>
         </div>
     )

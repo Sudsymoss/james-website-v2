@@ -1,98 +1,51 @@
 .footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    min-height: 10vh;
-    justify-items: center;
-    align-items: center;
-    border-top: 1px solid gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  min-height: fit-content;
+  justify-items: center;
+  border-top: 1px dashed gray;
+  padding: 1em;
 }
 
 .footer>p {
-    margin: 0;
-    padding: 0;
-    color: darkcyan;
+  margin: 0;
+  padding: 0;
+  color: darkcyan;
 
 }
 
 
 .footer>p>a:hover {
-    cursor: none;
+  cursor: none;
 }
 
-.username::before{
-    content: "User: ";
-    color: #4a4a4a;
-    font-weight: 500;
+.credits {
+  display: flex;
+  flex-direction: column;
+
 }
 
-.username{
-    color: gray !important;
+.credits h3,
+.credits h5 {
+  margin: 0;
 }
 
-
-.logoutbut {
-    color: gray;
-    transition: color 0.3s;
-    text-decoration: none;
-    background-image: linear-gradient(#b6b6b6, #464646);
-    background-size: 0% 0.1em;
-    background-position-y: 100%;
-    background-position-x: 100%;
-    background-repeat: no-repeat;
-    transition: background-size 0.2s ease-in-out;
-    font-weight: 500;
+.credits ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.logoutbut:hover {
-    color: rgb(59, 59, 59);
-    background-size: 100% 0.1em;
-    background-position-x: 0%;
-}
+@media (max-width: 600px) {
+  .footer {
+    font-size: 12px;
+    min-height: 10vh;
+    gap: 0.4em;
+  }
 
-.logoutbut {
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
+  .credits {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-  
-  .logoutbut::before,
-  .logoutbut::after {
-   content: '';
-    position: absolute;
-    width: 100%;
-    left: 0;
-  }
-  .logoutbut::before {
-    background-color: gray;
-    height: 2px;
-    bottom: 0;
-    transform-origin: 100% 50%;
-    transform: scaleX(0);
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  }
-  .logoutbut::after {
-    content: attr(data-replace);
-    height: 100%;
-    top: 0;
-    transform-origin: 100% 50%;
-    transform: translate3d(200%, 0, 0);
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-    color: #464646;
-  }
-  
-  .logoutbut:hover::before {
-    transform-origin: 0% 50%;
-    transform: scaleX(1);
-  }
-  .logoutbut:hover::after {
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .logoutbut span {
-    display: inline-block;
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  }
-  
-  .logoutbut:hover span {
-    transform: translate3d(-200%, 0, 0);
-  }
+}

@@ -1,3 +1,11 @@
+/* {
+  --snow: #fffbfeff;
+  --tropical-indigo: #8b80f9ff;
+  --timberwolf: #d0cfcfff;
+  --white: #ffffffff;
+  --rich-black: #0d1821ff;
+}*/
+
 .main {
   display: flex;
   flex-direction: column;
@@ -8,8 +16,56 @@
   flex-wrap: nowrap;
   font-size: 30px;
   font-family: 'Jersy';
-
+  position: relative;
 }
+
+.main svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main h1 {
+  text-align: center;
+  background: radial-gradient(circle, #8e2de2, rgb(127, 214, 255));
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 7s ease-in-out infinite, rotate 30s infinite ease-in-out !important;
+}
+
+@keyframes shine {
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(12deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-13deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 
 .main p {
   font-weight: 600;
@@ -98,11 +154,13 @@
 .ccard_container {
   width: 100%;
   text-align: center;
-  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 
 .ccard_title {
-  background: linear-gradient(to right, rgb(127, 214, 255), #f3bbe1);
+  background: linear-gradient(to right, rgb(25, 126, 174), #f3bbe1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -120,9 +178,15 @@
   overflow: visible;
   cursor: pointer;
   /*box-shadow: 1px 1px 17px 9px #ececec;*/
+  position: relative;
+  padding: 3em;
+}
 
-  padding: 3em 5em;
-  overflow: hidden;
+.ccard .header_wave_svg3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .ccard .citem {
@@ -214,6 +278,7 @@
   color: #000;
   padding: 5em 1em;
   background: #7926ff;
+  border-radius: 33% 67% 56% 44% / 53% 42% 58% 47%;
 }
 
 .acard span {
@@ -339,9 +404,6 @@
     gap: 0em;
   }
 
-  .ccard_container {
-    padding: 1em;
-  }
 
   .ccard {
     min-height: fit-content;
@@ -360,6 +422,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #7926ff80;
   }
 
   .aimg {
@@ -378,68 +441,14 @@
     height: 30vh;
     min-height: none;
   }
+  .ainfo{
+    font-size: 14px;
+
+  }
 }
 
 .ccc {
   display: grid;
   grid-template-columns: 1fr;
   font-size: 130%;
-}
-
-
-
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@-o-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
 }

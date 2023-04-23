@@ -10,7 +10,7 @@
   position: fixed;
     width: 100%;
     max-width: inherit;
-    background: #ffffff80 !important;
+    background: rgba(13, 24, 33, 0.574) !important;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
   z-index: 10;
