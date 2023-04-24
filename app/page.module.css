@@ -490,6 +490,9 @@
     font-size: 14px;
 
   }
+  .main h1{
+    font-size: 66px;
+  }
   .main_svg svg{
     height: 150px;
     width: 200%;
