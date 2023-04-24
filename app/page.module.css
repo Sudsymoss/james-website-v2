@@ -483,6 +483,7 @@
   .main {
     height: 30vh;
     min-height: none;
+    border-bottom: none;
   }
 
   .ainfo {
