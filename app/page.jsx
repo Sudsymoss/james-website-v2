@@ -46,9 +46,9 @@ export default function Home() {
         </div>
         <div className={styles.maintop}>
           <div className={styles.main_top_text}>
-            <h4>Hi i'm<span className={styles.main_top_text_cursor_blink}>_</span></h4>
+            <h4>Hi there, i'm<span className={styles.main_top_text_cursor_blink}>_</span></h4>
             <Link className={styles.namelink} href='/projects'>
-              <h1>James M</h1>
+              <h1>James Mowat</h1>
             </Link>
             <p>Read more about me below...</p>
           </div>
