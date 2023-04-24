@@ -17,14 +17,7 @@
   font-size: 30px;
   font-family: Jersy;
   position: relative;
-}
-
-.main svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(-100px);
+  border-bottom: 2px dashed gray;
 }
 
 .main h1 {
@@ -44,11 +37,42 @@
 }
 
 
+.main_svg{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    border-bottom: 2px dashed gray;
+}
+
+.main_svg svg {
+  position: relative;
+  display: block;
+  width: calc(184% + 1.3px);
+  height: 220px;
+}
+
+.main_svg .main_svg_fill {
+  fill: #7926FF;
+}
+
+
 
 @keyframes shine {
   to {
     background-position: -200% center;
   }
+}
+
+.maintop {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .main_top_text{
@@ -169,6 +193,134 @@
   font-size: 2em !important;
 }
 
+
+
+.acard {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 100%;
+  height: 100vh;
+  transition: 1s ease-in-out;
+  /* -webkit-clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px); */
+  /* clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px); */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  padding: 5em 1em;
+  background: #7926ff;
+  border-radius: 33% 67% 56% 44% / 53% 42% 58% 47%;
+  animation: morph 15s ease-in-out infinite;
+  z-index: 1;
+  position: relative;
+}
+
+.acard span {
+  font-weight: bold;
+  color: inherit;
+  text-align: center;
+  display: block;
+  padding-top: 1em;
+  font-size: 1em;
+  text-shadow: 0px 0px 15px #ffffff;
+}
+
+.ainfo {
+  font-weight: 500;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding-top: 0.1em;
+  font-size: 0.9em;
+  margin: 1em;
+  margin-top: 1em;
+  font-family: 'Monserat';
+}
+
+
+.acard .aimg {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 30% 70% 57% 43% / 30% 34% 66% 70%;
+  /* margin: 1.8em; */
+  background: rgb(98, 98, 194);
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: morph 15s ease-in-out infinite;
+}
+
+.aimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aimg img {
+  width: 15em;
+  height: 15em;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 5px solid #eaeaea;
+  box-shadow: 1px 1px 15px 8px #bebebe;
+  transition: 1s all;
+
+}
+
+.aimg img:hover {
+  transform: scale(1.05);
+  cursor: crosshair;
+}
+
+.acard .ashare {
+  text-align: center;
+  margin: 1.8em;
+}
+
+.abbba {
+  padding: 2em;
+  overflow: hidden;
+}
+
+
+
+.acard .sbutt {
+  color: inherit;
+  transition: .2s ease-in-out;
+
+}
+
+.sbutt svg {
+  transform: scale(1.5);
+}
+
+.acard .sbutt:hover {
+  color: #f3bbe1;
+}
+
+.acard .acont {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  margin-top: 2em;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.acard .acont:hover {
+  background: rgb(36, 116, 221);
+  color: white;
+}
+
+
+/*Final card with stats*/
+
 .ccard_container {
   width: 100%;
   text-align: center;
@@ -281,153 +433,6 @@
 
 
 
-.acard {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  width: 100%;
-  height: 100vh;
-  transition: 1s ease-in-out;
-  /* -webkit-clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px); */
-  /* clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px); */
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  padding: 5em 1em;
-  background: #7926ff;
-  border-radius: 33% 67% 56% 44% / 53% 42% 58% 47%;
-}
-
-.acard span {
-  font-weight: bold;
-  color: inherit;
-  text-align: center;
-  display: block;
-  padding-top: 1em;
-  font-size: 1em;
-  text-shadow: 0px 0px 15px #ffffff;
-}
-
-.ainfo {
-  font-weight: 500;
-  color: #fff;
-  display: block;
-  text-align: center;
-  padding-top: 0.1em;
-  font-size: 0.9em;
-  margin: 1em;
-  margin-top: 1em;
-  font-family: 'Monserat';
-}
-
-
-.acard .aimg {
-  width: fit-content;
-  height: fit-content;
-  border-radius: 30% 70% 57% 43% / 30% 34% 66% 70%;
-  /* margin: 1.8em; */
-  background: rgb(98, 98, 194);
-  padding: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: morph 15s ease-in-out infinite;
-}
-
-.aimg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.aimg img {
-  width: 15em;
-  height: 15em;
-  object-fit: cover;
-  border-radius: 100%;
-  border: 5px solid #eaeaea;
-  box-shadow: 1px 1px 15px 8px #bebebe;
-  transition: 1s all;
-
-}
-
-.aimg img:hover {
-  transform: scale(1.05);
-  cursor: crosshair;
-}
-
-.acard .ashare {
-  text-align: center;
-  margin: 1.8em;
-}
-
-.abbba {
-  padding: 2em;
-  overflow: hidden;
-}
-
-
-
-.acard .sbutt {
-  color: inherit;
-  transition: .2s ease-in-out;
-
-}
-
-.sbutt svg {
-  transform: scale(1.5);
-}
-
-.acard .sbutt:hover {
-  color: #f3bbe1;
-}
-
-.acard .acont {
-  padding: 0.8em 1.7em;
-  display: block;
-  margin: auto;
-  border-radius: 25px;
-  border: none;
-  margin-top: 2em;
-  font-weight: bold;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  transition: .4s ease-in-out;
-}
-
-.acard .acont:hover {
-  background: rgb(36, 116, 221);
-  color: white;
-}
-
-
-.maintop {
-  height: 55vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.arrow {
-  animation: updown 2s ease-in-out infinite;
-}
-
-@keyframes updown {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-50px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @media(max-width: 900px) {
   .aboutsec {
     grid-template-columns: 1fr;
@@ -483,6 +488,10 @@
   .ainfo {
     font-size: 14px;
 
+  }
+  .main_svg svg{
+    height: 150px;
+    width: 200%;
   }
 }
 

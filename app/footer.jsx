@@ -11,6 +11,7 @@ export default function Footer() {
                     <ul>
                         <li>Database: <Link href='https://pocketbase.io'>Pocketbase</Link></li>
                         <li>Github page: <Link href='https://github.com/jfmow'>jfmow</Link></li>
+                        <li>Built with the nextjs 13 app dir</li>
                     </ul>
                 </div>
                 <div className={styles.credits}>
