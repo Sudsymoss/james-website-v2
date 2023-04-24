@@ -42,6 +42,14 @@ a {
   font-family: "Monserat";
   src: url('../fonts/Montserrat-VariableFont_wght.ttf');
 }
+@font-face {
+  font-family: "Code";
+  src: url('../fonts/SourceCodePro-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: "BebasNEW";
+  src: url('../fonts/BebasNeue-Regular.ttf');
+}
 
 
 h1 {

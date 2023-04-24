@@ -3,46 +3,55 @@ import styles from './page.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
 import TopProjects from './topprojects'
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 export default function Home() {
+  const element1Ref = useRef(null);
+  const element2Ref = useRef(null);
+
   useEffect(() => {
-    const element = document.getElementById('me_img_1');
     const windowHeight = window.innerHeight;
 
-    function animateElementIn() {
+    function animateElementIn(ref) {
+      const element = ref.current;
       const elementTop = element.getBoundingClientRect().top + 170;
 
       if (elementTop <= windowHeight) {
         element.classList.add('animate-in');
-        document.getElementById('animate_element_2').classList.add('animate-in');
       }
     }
 
     function handleScroll() {
-      console.log('hi')
-      animateElementIn();
+      animateElementIn(element1Ref);
+      animateElementIn(element2Ref);
     }
 
     window.addEventListener('scroll', handleScroll);
-  }, [])
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div>
       <main className={styles.main}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7926ff" fill-opacity="1" d="M0,288L48,277.3C96,267,192,245,288,245.3C384,245,480,267,576,256C672,245,768,203,864,181.3C960,160,1056,160,1152,154.7C1248,149,1344,139,1392,133.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
         <div className={styles.maintop}>
-          <Link className={styles.namelink} href='/projects'>
-            <h1>James M</h1>
-          </Link>
-          <p>A devloper like no other</p>
+          <div className={styles.main_top_text}>
+            <h4>Hi i'm<span className={styles.main_top_text_cursor_blink}>_</span></h4>
+            <Link className={styles.namelink} href='/projects'>
+              <h1>James M</h1>
+            </Link>
+            <p>A devloper like no other</p>
+          </div>
         </div>
       </main>
       <div className={styles.aboutsec}>
         <div className={styles.abbba}>
           <div className={styles.acard}>
-            <div id='me_img_1' className={styles.aimg}>
-              <Image  priority width='400' height='400' alt="me" src="/Me-hmpg.jpg" />
+            <div ref={element1Ref} id='me_img_1' className={styles.aimg}>
+              <Image priority width='400' height='400' alt="me" src="/Me-hmpg.jpg" />
             </div>
-            <div id='animate_element_2' className={styles.ccc}>
+            <div ref={element2Ref} id='animate_element_2' className={styles.ccc}>
               <span className={styles.sectitle}>About Me</span>
               <p className={styles.ainfo}>I'm James, a fairly new developer with a focus on Next.js and Node.js. My specialization lies in creating efficient and scalable web applications using these technologies. Leveraging my expertise in Next.js and Node.js, I can help you build fast and responsive websites that deliver an exceptional user experience.</p>
               <div className={styles.ashare}>
@@ -57,11 +66,11 @@ export default function Home() {
           </div>
         </div>
         <TopProjects />
-        <div className={styles.ccard_container}>
+        <div  className={styles.ccard_container}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7926ff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,245.3C384,256,480,224,576,224C672,224,768,256,864,224C960,192,1056,96,1152,90.7C1248,85,1344,171,1392,213.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 
           <span className={`${styles.sectitle} ${styles.ccard_title}`}>Some stats</span>
-          <div className={styles.ccard}>
+          <div  className={styles.ccard}>
             <div className={`${styles.citem} ${styles.citem1}`}>
               <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path fill="rgba(149,149,255,1)" d="M17 15.245v6.872a.5.5 0 0 1-.757.429L12 20l-4.243 2.546a.5.5 0 0 1-.757-.43v-6.87a8 8 0 1 1 10 0zm-8 1.173v3.05l3-1.8 3 1.8v-3.05A7.978 7.978 0 0 1 12 17a7.978 7.978 0 0 1-3-.582zM12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path></svg>
               <span className={styles.cquantity}> 5+ </span>
