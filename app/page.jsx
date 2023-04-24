@@ -41,7 +41,7 @@ export default function Home() {
             <Link className={styles.namelink} href='/projects'>
               <h1>James M</h1>
             </Link>
-            <p>A devloper like no other</p>
+            <p>Read more about me below...</p>
           </div>
         </div>
       </main>
@@ -66,11 +66,11 @@ export default function Home() {
           </div>
         </div>
         <TopProjects />
-        <div  className={styles.ccard_container}>
+        <div className={styles.ccard_container}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7926ff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,245.3C384,256,480,224,576,224C672,224,768,256,864,224C960,192,1056,96,1152,90.7C1248,85,1344,171,1392,213.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 
           <span className={`${styles.sectitle} ${styles.ccard_title}`}>Some stats</span>
-          <div  className={styles.ccard}>
+          <div className={styles.ccard}>
             <div className={`${styles.citem} ${styles.citem1}`}>
               <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path fill="rgba(149,149,255,1)" d="M17 15.245v6.872a.5.5 0 0 1-.757.429L12 20l-4.243 2.546a.5.5 0 0 1-.757-.43v-6.87a8 8 0 1 1 10 0zm-8 1.173v3.05l3-1.8 3 1.8v-3.05A7.978 7.978 0 0 1 12 17a7.978 7.978 0 0 1-3-.582zM12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path></svg>
               <span className={styles.cquantity}> 5+ </span>
