@@ -18,6 +18,7 @@ export default async function ProjectPage(params) {
       <div className={styles.project}>
         <div className={card.card}>
           <h1>{project.title}</h1>
+          {project.archived ? (<><h2 style={{margin: '0', color: 'red'}}>Archived</h2><h6>No longer updated/active</h6></>):('')}
           <h4>Created {new Date(project.created).toLocaleDateString()} | Updated {new Date(project.updated).toLocaleDateString()}</h4>
           <div className={card.project_card_info}>
             <h5>About</h5>
