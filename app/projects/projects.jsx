@@ -1,4 +1,3 @@
-'use server';
 import Link from "next/link";
 import styles from './Projects.module.css'
 import PocketBase from 'pocketbase';
@@ -9,21 +8,22 @@ pb.autoCancellation(false)
 async function getProjects() {
   //const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   //await delay(5000);
-  const data = await pb.collection('projects').getFullList(200 /* batch size */, {sort: '-created'});
-  //{sort: '-created', filter: 'author = ""'}
-
-  return data;
-}
-
-export default function Projectss() {
-  return(
-    <ProjectMap/>
-  )
-}
-
-async function ProjectMap(){
   try {
-    const projects1 = await getProjects();
+    const data = await pb.collection('projects').getFullList(200 /* batch size */, { sort: '-created' });
+    //{sort: '-created', filter: 'author = ""'}
+    return data;
+  } catch (err) {
+    return {err}
+  }
+
+}
+
+export default async function Projectss() {
+  const projects1 = await getProjects();
+  if(projects1.err){
+    console.log('hi',projects1)
+  }
+  try {
     return (
       <div className={styles.main}>
         <div className={styles.projects}>
@@ -43,8 +43,8 @@ async function ProjectMap(){
     );
   } catch (error) {
     console.log(error)
-    return(
-      <Loader errormsg='ALERT Load failed!'/>
+    return (
+      <Loader errormsg='ALERT Load failed!' />
     )
   }
 }

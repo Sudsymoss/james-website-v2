@@ -82,7 +82,6 @@ export default function Home() {
         <div className={styles.ccard_container}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7926ff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,245.3C384,256,480,224,576,224C672,224,768,256,864,224C960,192,1056,96,1152,90.7C1248,85,1344,171,1392,213.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
           <span className={`${styles.sectitle} ${styles.ccard_title}`}>Some stats</span>
-
           <div className={styles.ccard_container_content}>
             <div className={styles.ccard}>
               <div className={`${styles.citem} ${styles.citem1}`}>
