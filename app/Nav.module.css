@@ -10,11 +10,12 @@
   position: fixed;
     width: 100%;
     max-width: inherit;
-    background: rgba(13, 24, 33, 0.574) !important;
+    background: rgba(255, 255, 255, 0.574) !important;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
   z-index: 10;
   top: 0;
+  color: #363636;
 }
 
 .navdiv > ul{

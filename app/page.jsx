@@ -54,7 +54,6 @@ export default function Home() {
             <Link className={styles.namelink} href='/projects'>
               <h1>James Mowat</h1>
             </Link>
-            <p>Read more about me below...</p>
           </div>
         </div>
       </main>
