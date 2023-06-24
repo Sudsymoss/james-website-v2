@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-around;
     margin: 0 10vh;
-    background: hsla(0,0%,100%,.574)!important;
+    background: hsla(0, 0%, 0%, 0.574)!important;
     backdrop-filter: blur(3px);
     width: fit-content;
 }
@@ -21,7 +21,6 @@
   -webkit-backdrop-filter: blur(3px);
   z-index: 10;
   top: 0;
-  color: #363636;
   justify-content: center;
   align-items: center;
 }
@@ -55,7 +54,6 @@ font-weight: 500;
 .normalnavitem:hover{
   color: #7926ff;
     background-size: 100% 0.1em;
-    transform: scale(1.07);
 }
 .normalnavitem:active{
   transform: scale(0.95);

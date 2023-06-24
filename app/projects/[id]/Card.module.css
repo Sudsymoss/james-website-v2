@@ -5,7 +5,7 @@
     position: relative;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-radius: 1em;
-    box-shadow: 0 0 20px 8px #cbd4db;
+    box-shadow: 0 0 20px 8px #3f4244;
     overflow: hidden;
     padding: 2em;
 }

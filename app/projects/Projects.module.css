@@ -142,16 +142,17 @@
     width: 40vh;
     height: 254px;
     border-radius: 20px;
-    background: #ffffff;;
+    background: linear-gradient(45deg, #343434 50%, #3f4244 50%);
     position: relative;
     padding: 1.8rem;
     transition: 0.3s ease-out;
     overflow: visible;
     cursor: pointer;
+    border: 2px solid #fff;
    }
    
    .carddetails {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     height: 100%;
     gap: .5em;
     display: grid;
@@ -192,7 +193,7 @@
    
    /*Hover*/
    .card:hover {
-    box-shadow: 1px 1px 20px 9px #efefef;
+    box-shadow: 1px 1px 20px 9px #3f4244;
     transform: scale(1.05);
    }
    
